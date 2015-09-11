@@ -29,6 +29,9 @@ CPP  = g++
 CC   = gcc
 WINDRES = windres
 DLLTOOL = dlltool
+RM = rm -f
+MKDIR = mkdir -p
+
 CMPLBIN  = bin/dkillcmpl$(EXEEXT)
 DCPLBIN  = bin/dkilldcpl$(EXEEXT)
 LIBS =
@@ -53,11 +56,13 @@ WARNFLAGS = -Wall -Wno-sign-compare -Wno-unused-parameter
 CXXFLAGS = $(CXXINCS) -std=c++11 -c -fmessage-length=0 $(WARNFLAGS) $(DEPFLAGS) $(OPTFLAGS)
 CFLAGS = $(INCS) -c -fmessage-length=0 $(WARNFLAGS) $(DEPFLAGS) $(OPTFLAGS)
 LDFLAGS = $(LINKLIB) $(OPTFLAGS) $(DBGFLAGS) $(LINKFLAGS)
-RM = rm -f
 
 .PHONY: all all-before all-after clean clean-custom
 
 all: all-before $(DCPLBIN) $(CMPLBIN) all-after
+
+all-before:
+	$(MKDIR) obj bin
 
 clean: clean-custom
 	-${RM} $(OBJS) $(DCPLBIN) $(CMPLBIN) $(LIBS)
