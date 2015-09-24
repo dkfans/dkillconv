@@ -20,14 +20,16 @@
 #define DKILLCONV_VERSION_H
 
 /* Version definitions */
-#define VER_MAJOR         1
-#define VER_MINOR         0
-#define VER_RELEASE       0
-#define VER_BUILD         0
-#define VER_STRING        "1.0.0.0"
+#include "../obj/ver_defs.h"
+//#define VER_MAJOR         1
+//#define VER_MINOR         2
+//#define VER_RELEASE       3
+//#define VER_BUILD         4
+//#define VER_STRING        "1.2.3.4"
+
 /* Program name, copyrights and file names */
 #define PROGRAM_NAME      "dkillconv"
-#define PROGRAM_FULL_NAME ".dkill conv - Dungeon Keeper Independent Level Layout  converter"
+#define PROGRAM_FULL_NAME ".dkill conv - Dungeon Keeper Independent Level Layout converter"
 #define PROGRAM_AUTHORS   "Tomasz Lis"
 #define COMPANY_NAME      "Community based"
 #define INTERNAL_NAME     "dkillconv"
